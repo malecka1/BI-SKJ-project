@@ -1,0 +1,66 @@
+# Graph animation : Simple Effect
+# Example config file
+# Created by barinkl, edited by malecka1
+# Last modification: 2015-04-24
+     
+# Timestamp format - see strftime(3c)
+# Default: TimeFormat [%Y-%m-%d %H:%M:%S]
+TimeFormat *--SKJ[%Y/%m/%d %H:%M:%S]SKJ--*
+	
+# Max value x-axis - "auto" adjust, "max" value, fix value
+# E.g.: Xmax auto / Xmax max / Xmax 42
+# Default: Xmax max
+ 		  
+# Min value x-axis - "auto" adjust, "min" value, fix value
+# E.g.: Xmin auto / Xmin min / Xmin -42
+# Default: Xmin min
+ 
+# Max value y-axis - "auto" adjust, "max" value, fix value
+# E.g.: Ymax auto / Ymax max / Ymax 42
+# Default: Ymax max
+Ymax 10000
+ 
+# Min value y-axis - "auto" adjust, "min" value, fix value
+# E.g.: Ymin auto / Ymin min / Ymin -42
+# Default: Ymin min
+Ymin -5000
+ 
+# Speed - increment of records per frame
+	# Speed/Time are exclusive
+# Default: Speed 1
+Speed	15 # records per frame
+ 
+# Animation duration in seconds
+# Speed/Time are exclusive
+# No default/unspecified: Time=Records/Speed/FPS
+Time	 12
+ 
+# Frames per second (framerate)
+# Default: 25
+ 
+# Critical value, axis=value
+# This directive can be used more than once
+# Couple axis=value can be user more than once, separated by :
+# No default
+# For time format with time:
+#CriticalValue x=09/09/01 10:00:00
+#CriticalValue x=09/07/01 10:00:01:y=500:y=590:y=600
+ 
+# Legend - graph title (text string)
+# No default
+Legend SKJ
+
+# GnuplotParam, parameter
+# This directive can be used more than once
+# No default
+GnuplotParams ytics textcolor rgbcolor "blue"   # blue tics
+GnuplotParams xtics textcolor rgbcolor "green"   # blue tics
+
+# Effect parameters, value = number of uprising points from x-axe
+# No default
+EffectParams 50
+ 
+# Project name, used for directory name
+# No default
+Name test_animation
+

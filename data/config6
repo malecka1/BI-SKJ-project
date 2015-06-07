@@ -1,0 +1,56 @@
+# Graph animation : Simple Effect
+# Example config file
+# Created by barinkl, edited by malecka1
+# Last modification: 2015-04-24
+     
+# Timestamp format - see strftime(3c)
+# Default: TimeFormat [%Y-%m-%d %H:%M:%S]
+TimeFormat [%Y/%m/%d %H:%M:%S]
+	 
+# Max value y-axis - "auto" adjust, "max" value, fix value
+# E.g.: Ymax auto / Ymax max / Ymax 42
+# Default: Ymax max
+Ymax max
+ 
+# Min value y-axis - "auto" adjust, "min" value, fix value
+# E.g.: Ymin auto / Ymin min / Ymin -42
+# Default: Ymin min
+Ymin min
+ 
+# Speed - increment of records per frame
+	# Speed/Time are exclusive
+# Default: Speed 1
+Speed	5 # records per frame
+ 
+# Animation duration in seconds
+# Speed/Time are exclusive
+# No default/unspecified: Time=Records/Speed/FPS
+Time	 30
+ 
+# Frames per second (framerate)
+# Default: 25
+ 
+# Critical value, axis=value
+# This directive can be used more than once
+# Couple axis=value can be user more than once, separated by :
+# No default
+CriticalValue y=5000:y=10000:y=-2000:y=7500.01 # komentar
+
+# Legend - graph title (text string)
+# No default
+Legend Example - Simple effect
+
+# GnuplotParam, parameter
+# This directive can be used more than once
+# No default
+GnuplotParams format x"%d/%m"
+GnuplotParams grid xtics ytics                 # setup grid
+
+# Effect parameters, value = number of uprising points from x-axe
+# No default
+EffectParams 1005
+ 
+# Project name, used for directory name
+# No default
+Name test_animation
+
